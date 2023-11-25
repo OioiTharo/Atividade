@@ -1,0 +1,8 @@
+<mat-card class="filmes" *ngFor="let filme of filmes">
+    <mat-card-content>
+        <h3>{{ filme.titulo }}</h3>
+        <p>{{ filme.descricao }}</p>
+        <img class="imgs" [src]="filme.imagem" alt="{{ filme.titulo }}">
+    
+    </mat-card-content>
+  </mat-card>

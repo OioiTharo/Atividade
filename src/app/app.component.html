@@ -1,0 +1,12 @@
+<div class="ok">
+  <mat-form-field class="example-full-width">
+  <mat-label for="categoriaInput">Categoria</mat-label>
+  <input matInput #categoriaInput [(ngModel)]="categoria" id="categoriaInput" placeholder="Digite a categoria">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="buscarFilmes(categoria)">Buscar Filmes</button>
+</div>
+
+<div class="ok" *ngIf="categoria && filmesPorCategoria.length > 0">
+  <h2>Filmes da categoria: {{ categoria }}</h2>
+  <app-lista-filmes [filmes]="filmesPorCategoria"></app-lista-filmes>
+</div>
